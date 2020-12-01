@@ -10,7 +10,7 @@ namespace RentalHome.Models
     public class SQLConnection
     {
         SqlConnection sqlConn;
-        String connection_String = "Data Source=DESKTOP-G2UGPMF\\SQLEXPRESS;Initial Catalog=RentalHome;Integrated Security=True";
+        String connection_String = "Data Source=DESKTOP-57QUUPE\\SQLEXPRESS;Initial Catalog=RentalHome;Integrated Security=True";
         SqlCommand sqlCmd;
         SqlDataReader sqlDatareader;
 

@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link rel="stylesheet" href="~/css/bootstrap.css"> <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="~/css/style.css" type="text/css" media="all" /> <!-- Style-CSS -->
+
+
+</head>
+<body>
+
+
+    <!--/banner-->
+    <div class="top-bar_sub_w3layouts container-fluid" style="background-color:rgb(155,0,0);color:white;">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 log-icons mt-2">
+                <p class="py-2" style="color:white;"><i class="fas fa-phone"></i> Call US : 64(12) 453 1234</p>
+            </div>
+            <div class="col-md-4 col-sm-6 logo">
+                <a class="navbar-brand" href="@Url.Action("AdminLogin","AdminLogin")" style="color:white;">
+                    <i class="fas fa-home"></i>Rental Home
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner" id="home" style="background-color:black;">
+        <!-- header -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light top-header">
+                <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link ml-lg-0" href="@Url.Action("Index","Home")">
+                                Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="@Url.Action("About","Home")" class="nav-link">About</a>
+                            
+                        </li>
+                        <li class="nav-item">
+                            <a href="@Url.Action("Services","Home")" class="nav-link">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="@Url.Action("Gallery","Home")" class="nav-link">Gallery</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="@Url.Action("Contact","Home")" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+        </header>
+        <!-- //header -->
+        <!-- banner-text -->
+        <div id="wrapper">
+
+            <!-- Slideshow 1 -->
+            <div class="rslides_container">
+                <ul class="rslides" id="slider1">
+                    <li>
+                        <div class="banner-img">
+                            <div class="bs-slider-overlay">
+                                <div class="banner-info text-center">
+                                    <span class="fas fa-home"></span>
+                                    <h1>Rental Home  </h1>
+                                    <h2 class="mb-5"><i class="fas fa-phone"></i> 64(12) 453 1234</h2>
+                                    <a href="#">Call Now </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- //banner -->
+
+
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+
+    </div>
+
+
+
+
+    <!--footer-->
+    <footer class="py-sm-5 py-4 px-md-5 px-3">
+        <div class="container-fluid pt-lg-5">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mb-lg-0 mb-5 footer-grid-agileits-w3ls1 text-left">
+                    <h3 class="mb-sm-5 mb-4 mt-sm-0 mt-4">Rental Home Pvt. Ltd.</h3>
+                    <p style="color:white;text-align:justify;">
+                        With over 30 years of Rental experience and courteous customer service, you can bet Avenue Road Rentals knows its business. Commitment to high standards and customer care, backed up by a solution driven, Canadian proud professional team, we are a small independent company with our customer’s best interest in mind. All home construction and repair information is accompanied by the advice you, as a customer, needs to know about the right equipment and for the right job.
+                    </p>
+                    <a href="#" class="read">Know More <i class="fas fa-caret-right"></i></a>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-lg-0 mb-5 footer-grid-agileits-w3ls1 text-left">
+                    <h3 class="mb-sm-5 mb-4">Locate Us</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22211752.331673134!2d-117.2895783028778!3d47.189270040250605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34c55819e6a9%3A0x4b51f2dfb4f97bc6!2sSpaces%20-%20Ontario%2C%20Toronto%20-%20Spaces%20Toronto%20-%20Queen%20West!5e0!3m2!1sen!2sin!4v1606639531583!5m2!1sen!2sin" style="height:300px;width:350px;" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <div class="col-lg-3 col-sm-4 subscribe-main footer-grid-agileits-w3ls text-left">
+                    <!-- //subscribe -->
+                    <div class="footer-social icon">
+                        <div class="copyrighttop">
+                            <h3 class="mb-sm-5 mb-4">Stay In Touch</h3>
+                            <img src="~/images/sicn.jpg" class="img img-thumbnail" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- copyright -->
+            <div class="footer-cpy text-center pt-sm-5 mt-sm-5 mt-4 pt-3">
+                <div class="w3layouts-agile-copyrightbottom">
+                    <p>
+                        © 2020 Rental Home . All Rights Reserved | Design
+
+                    </p>
+
+                </div>
+            </div>
+            <!-- //copyright -->
+        </div>
+    </footer>
+    <!-- //footer -->
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+

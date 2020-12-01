@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+
+<section class="why">
+    <div class="container p-md-5 p-3">
+        <h3 class="heading text-capitalize text-center">Rental Home </h3>
+        <h5 class="heading mb-5 text-center">Contact Us</h5>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="~/images/contact.jpg" class="img img-thumbnail" />
+            </div>
+            <div class="col-md-6">
+                <form method="post" action="PassQuery">
+                    <div class="form-group">
+                        <label>Enter Name </label>
+                        <input type="text" id="Name" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Enter Email </label>
+                        <input type="Email" id="Email" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Enter Contact </label>
+                        <input type="number" id="Phone" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Enter Address</label>
+                        <input type="text" id="Message" class="form-control" style="height:120px;" />
+                    </div>
+                    <input type="submit" class="btn btn-primary" />
+
+                </form>
+            </div>
+
+
+
+        </div>
+    </div>
+</section>
+

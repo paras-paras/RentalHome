@@ -1,0 +1,40 @@
+﻿@model IEnumerable<RentalHome.Models.ServiceDetail>
+
+@{
+    ViewBag.Title = "ViewAllServices";
+}
+
+<h2>All Services</h2>
+
+<p>
+    @Html.ActionLink("Add New ", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>Edit || Delete</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ServiceName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            <p class="btn btn-danger">@Html.ActionLink("Edit", "Edit", new { id = item.id }) </p>|| 
+            
+            <p class="btn btn-warning">@Html.ActionLink("Delete", "Delete", new { id = item.id })</p>
+</td>
+    </tr>
+}
+
+</table>
+<a href="@Url.Action("Valid","AdminLogin")" class="btn btn-default">Back to Main</a>

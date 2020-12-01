@@ -1,0 +1,54 @@
+﻿@model IEnumerable<RentalHome.Models.EmployeeDetail>
+
+@{
+    ViewBag.Title = "ViewAllEmployee";
+}
+
+<h2>All Employee</h2>
+
+<p>
+    @Html.ActionLink("Register ", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contact)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Designation)
+        </th>
+        <th>Edit | Delete </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contact)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Designation)
+        </td>
+        <td>
+            <p class="btn btn-warning">@Html.ActionLink("Edit", "Edit", new { id = item.ID }) </p>
+            <p class="btn btn-danger">
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })</p>
+</td>
+    </tr>
+}
+
+</table>
+
+
+<a href="@Url.Action("Valid","AdminLogin")" class="btn btn-default">Back to Dashboard </a>
